@@ -21,7 +21,7 @@ const App = () => {
   }, []);
   return (
     <div className="App">
-      <Navbar />
+      <Navbar coinData={coinData}/>
       <Route exact path="/" component={(props) => <Charts {...props} coinData={coinData} />}/>
       <Route path ="/:id" component = {(props) => <Coin {...props} coinData={coinData}/>}/>
     </div>
